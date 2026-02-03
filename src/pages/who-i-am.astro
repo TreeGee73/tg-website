@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageTitle="Who I Am" pageClass="who-i-am-page">
+    <article class="about-content">
+        <h1>Who I Am</h1>
+        
+        <div class="intro-section">
+            <p class="lead">
+                I'm an IT professional with a passion for cybersecurity and a journey 
+                that's taught me resilience, adaptability, and the power of never giving up.
+            </p>
+        </div>
+
+        <section class="story">
+            <h2>My Journey</h2>
+            
+            <div class="story-block">
+                <h3>Where It Started</h3>
+                <p>
+                    [YOUR STORY HERE - Tell about your bootcamp, first steps into web development]
+                </p>
+            </div>
+
+            <div class="story-block">
+                <h3>The Pivot to Cybersecurity</h3>
+                <p>
+                    [YOUR STORY HERE - Talk about discovering your passion for security, 
+                    starting your cyber degree, the challenges and growth]
+                </p>
+            </div>
+
+            <div class="story-block">
+                <h3>What Drives Me</h3>
+                <p>
+                    [YOUR STORY HERE - What motivates you, your values, what you bring 
+                    to the table beyond technical skills]
+                </p>
+            </div>
+
+            <div class="story-block">
+                <h3>Beyond the Code</h3>
+                <p>
+                    [YOUR STORY HERE - Your creative side, writing, music, what makes you 
+                    more than just your technical skills]
+                </p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <p>Want to see what I can do?</p>
+            <a href="/what-i-can-do" class="btn-primary">View My Skills & Experience</a>
+        </div>
+    </article>
+</BaseLayout>
+
+<style>
+    .who-i-am-page {
+        /* This class hooks into the pageClass prop for page-specific body styling */
+    }
+
+    .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #1a1a1a;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .intro-section {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background-color: #fff5f0; /* Warm background */
+        border-radius: 12px;
+        border-left: 4px solid #ff6b35; /* Warm accent color */
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .story {
+        margin-bottom: 3rem;
+    }
+
+    .story h2 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ff6b35;
+    }
+
+    .story-block {
+        margin-bottom: 2.5rem;
+    }
+
+    .story-block h3 {
+        font-size: 1.5rem;
+        color: #ff6b35;
+        margin-bottom: 1rem;
+    }
+
+    .story-block p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #ff6b35;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #e55a28;
+        transform: translateY(-2px);
+    }
+</style>

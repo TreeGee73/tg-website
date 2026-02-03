@@ -1,17 +1,83 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="Home">
+    <div class="hero">
+        <h1>Theresa Grier</h1>
+        <p class="tagline">IT Professional | Cybersecurity | Full-Stack Developer</p>
+        <p class="intro">
+            Welcome! I'm building solutions, solving problems, and strengthening security 
+            in the digital world.
+        </p>
+        <div class="cta-buttons">
+            <a href="/who-i-am" class="btn-primary">Learn About Me</a>
+            <a href="/what-i-can-do" class="btn-secondary">See What I Can Do</a>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .hero {
+        text-align: center;
+        padding: 4rem 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 3rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .btn-primary {
+        background-color: #0066cc;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #0052a3;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: #0066cc;
+        border: 2px solid #0066cc;
+    }
+
+    .btn-secondary:hover {
+        background-color: #0066cc;
+        color: white;
+        transform: translateY(-2px);
+    }
+</style>
