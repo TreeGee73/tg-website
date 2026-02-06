@@ -1,463 +1,511 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageTitle="What I Can Do" pageClass="what-i-can-do-page">
-  <article class="skills-content">
-    <h1>What I Can Do</h1>
+<BaseLayout title="What I Can Do | Theresa Grier">
+    <article class="what-i-can-do-page">
+        <!-- Hero Section with Hexagon Headshot -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="/images/headshot.png" alt="Theresa Grier - IT Professional & Cybersecurity Specialist" class="hexagon-frame" />
+                </div>
+                <div class="hero-text">
+                    <h1>What I Can Do</h1>
+                    <p class="intro">
+                        From full-stack development to IT infrastructure management to cybersecurity - 
+                        I bring a comprehensive technical skill set backed by hands-on leadership experience 
+                        and a growing collection of industry certifications.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <div class="intro-section">
-      <p class="lead">
-        Combining cybersecurity expertise with full-stack development skills to
-        build secure, functional solutions.
-      </p>
-    </div>
+        <div class="content-wrapper">
+            <!-- Certifications Section -->
+            <section class="certifications">
+                <h2>Certifications & Education</h2>
+                <p class="certs-intro">Currently pursuing additional industry certifications through my WGU degree program, including CompTIA Network+, Security+, and more.</p>
+                <div class="cert-grid">
+                    <!-- Cybersecurity Degree (in progress) - CURRENT -->
+                    <div class="cert-card in-progress">
+                        <div class="cert-icon">🎓</div>
+                        <h3>B.S. Cybersecurity & Information Assurance</h3>
+                        <p>Western Governors University</p>
+                        <p class="cert-details">In Progress • Expected 2026</p>
+                    </div>
 
-    <section class="certifications">
-      <h2>Certifications & Education</h2>
-      <p class="certs-intro">
-        Currently pursuing additional industry certifications through my WGU
-        degree program, including CompTIA Network+, Security+, and more.
-      </p>
-      <div class="cert-grid">
-        <!-- Cybersecurity Degree (in progress) - CURRENT -->
-        <div class="cert-card in-progress">
-          <div class="cert-icon">🎓</div>
-          <h3>B.S. Cybersecurity & Information Assurance</h3>
-          <p>In Progress | Western Governors University</p>
-          <p class="cert-details">Expected completion: 2026</p>
+                    <!-- CompTIA A+ (2024) - RECENT -->
+                    <a href="https://www.credly.com/badges/4d738f02-3e5f-450e-ae38-9972b409197c" target="_blank" rel="noopener noreferrer" class="cert-card">
+                        <div class="cert-badge-image">
+                            <img src="/badges/comptia-a-plus.png" alt="CompTIA A+ Certification Badge" />
+                        </div>
+                        <h3>CompTIA A+</h3>
+                        <p class="cert-details">Earned 2024</p>
+                        <span class="verify-link">View Credential →</span>
+                    </a>
+
+                    <!-- Full-Stack Web Development (2021) - FOUNDATION -->
+                    <a href="https://www.credly.com/badges/your-fswd-badge-id" target="_blank" rel="noopener noreferrer" class="cert-card">
+                        <div class="cert-badge-image">
+                            <img src="/badges/full-stack-web-development.png" alt="Full-Stack Web Development Certificate Badge" />
+                        </div>
+                        <h3>Full-Stack Web Development</h3>
+                        <p>University of Arizona</p>
+                        <p class="cert-details">Completed 2021</p>
+                        <span class="verify-link">View Credential →</span>
+                    </a>
+
+                    <!-- Future Certification Goals - COMMENTED OUT -->
+                    <!-- 
+                    <div class="cert-card placeholder">
+                        <div class="cert-icon">🎯</div>
+                        <h3>Next Certification Goals</h3>
+                        <p>CompTIA Network+</p>
+                        <p>CompTIA Security+</p>
+                        <p class="cert-details">Target: 2025</p>
+                    </div>
+                    -->
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills">
+                <h2>Technical Skills</h2>
+                
+                <div class="skill-category">
+                    <h3>🔒 Cybersecurity & IT</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">System Administration</span>
+                        <span class="skill-tag">Hardware Troubleshooting</span>
+                        <span class="skill-tag">User Support</span>
+                        <span class="skill-tag">IT Infrastructure</span>
+                        <span class="skill-tag">Vendor Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🛠️ Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">WordPress</span>
+                        <span class="skill-tag">Microsoft 365</span>
+                        <span class="skill-tag">Google Workspace</span>
+                        <span class="skill-tag">Slack</span>
+                        <span class="skill-tag">Zoom</span>
+                        <span class="skill-tag">Asana</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>👥 Professional Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Technical Training</span>
+                        <span class="skill-tag">Documentation</span>
+                        <span class="skill-tag">Process Improvement</span>
+                        <span class="skill-tag">Stakeholder Communication</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience Section -->
+            <section class="experience">
+                <h2>Professional Experience</h2>
+                
+                <p class="experience-intro">
+                    My career spans entrepreneurship, startups, and nonprofit organizations—each role 
+                    teaching me something different about building, securing, and maintaining technical 
+                    systems that people depend on.
+                </p>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Co-Founder & Operations Lead</h3>
+                        <span class="company">GeeCubed, LLC</span>
+                        <span class="dates">2021–Present</span>
+                    </div>
+                    <p class="experience-description">
+                        Co-founded a technical services company specializing in IT solutions and engineering. 
+                        Lead all IT operations including web development, technical consulting, and digital 
+                        infrastructure management for small business clients. Handle business operations, 
+                        client relationships, and service delivery while maintaining hands-on technical work.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Director of IT</h3>
+                        <span class="company">Wallace MacDonald</span>
+                        <span class="dates">2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Managed infrastructure and security for a green energy startup. Implemented security 
+                        protocols, protected proprietary technology, and oversaw all IT operations. This role 
+                        crystallized my commitment to cybersecurity as the foundation of reliable systems.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>IT Manager</h3>
+                        <span class="company">League of Historic American Theatres</span>
+                        <span class="dates">2013–2024</span>
+                    </div>
+                    <p class="experience-description">
+                        Managed all technical operations for a national nonprofit organization. Directed website 
+                        operations, database management, email migrations, mobile app development, and user training. 
+                        Served as the technical backbone for the organization, coordinating vendors and ensuring 
+                        seamless day-to-day IT operations.
+                    </p>
+                </div>
+
+                <div class="linkedin-cta">
+                    <p>For my complete professional history, recommendations, and detailed accomplishments:</p>
+                    <a href="https://www.linkedin.com/in/theresa-grier/" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
+                        View Full Profile on LinkedIn
+                    </a>
+                </div>
+            </section>
         </div>
-
-        <!-- CompTIA A+ Certification - RECENT -->
-        <a
-          href="https://www.credly.com/badges/4d738f02-3e5f-450e-ae38-9972b409197c"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cert-card"
-        >
-          <div class="cert-badge-image">
-            <img
-              src="/badges/comptia-a-plus.png"
-              alt="CompTIA A+ Certification"
-            />
-          </div>
-          <h3>CompTIA A+</h3>
-          <p>Certified | 2024</p>
-          <p class="cert-details">Core IT infrastructure and troubleshooting</p>
-          <span class="verify-link">Click to verify →</span>
-        </a>
-
-        <!-- Full-Stack Web Development - FOUNDATION -->
-        <a
-          href="https://www.credly.com/earner/earned/badge/6114da00-cc24-4d4d-9549-032aab8adb92"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cert-card"
-        >
-          <div class="cert-badge-image">
-            <img
-              src="/badges/full-stack-web-development.png"
-              alt="Full-Stack Web Development Certification"
-            />
-          </div>
-          <h3>Full-Stack Web Development</h3>
-          <p>Certified | 2021</p>
-          <p class="cert-details">
-            JavaScript, React, Node.js, databases, modern frameworks
-          </p>
-          <span class="verify-link">Click to verify →</span>
-        </a>
-
-        <!-- Future Certification Placeholder -->
-        <!-- <div class="cert-card placeholder">
-          <div class="cert-icon">🔒</div>
-          <h3>Security+ / CISSP</h3>
-          <p>Next certification goals</p>
-          <p class="cert-details">
-            Building toward advanced security credentials
-          </p>
-        </div> -->
-      </div>
-    </section>
-
-    <section class="skills">
-      <h2>Technical Skills</h2>
-
-      <div class="skill-category">
-        <h3>Cybersecurity & Infrastructure Security</h3>
-        <ul class="skill-list">
-          <li>Cybersecurity Implementation</li>
-          <li>Cybersecurity Governance</li>
-          <li>Infrastructure Security</li>
-          <li>Application Security</li>
-          <li>Security Protocols</li>
-          <li>Risk Assessment</li>
-          <li>Incident Response</li>
-          <li>SSL/TLS</li>
-          <li>Network Configuration</li>
-          <li>Business Continuity Planning</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>IT Infrastructure & Systems</h3>
-        <ul class="skill-list">
-          <li>IT Infrastructure Management</li>
-          <li>System Administration</li>
-          <li>System Configuration</li>
-          <li>Cloud Computing</li>
-          <li>Virtualization</li>
-          <li>Backup and Recovery</li>
-          <li>Computer Network Management</li>
-          <li>Mobile Device Management (MDM)</li>
-          <li>Operating Systems (Linux, macOS, Windows)</li>
-          <li>Technical Support</li>
-          <li>Help Desk Support</li>
-          <li>Troubleshooting</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Development & Programming</h3>
-        <ul class="skill-list">
-          <li>JavaScript</li>
-          <li>React.js</li>
-          <li>Node.js</li>
-          <li>HTML/CSS</li>
-          <li>RESTful APIs</li>
-          <li>jQuery</li>
-          <li>JSON</li>
-          <li>Agile Software Development</li>
-          <li>Git</li>
-          <li>GitHub</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Databases & Backend</h3>
-        <ul class="skill-list">
-          <li>Database Management</li>
-          <li>Database Development</li>
-          <li>MongoDB</li>
-          <li>MySQL</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Web & Application Technologies</h3>
-        <ul class="skill-list">
-          <li>Web Development</li>
-          <li>Web Design</li>
-          <li>Mobile Application Development</li>
-          <li>CMS Administration</li>
-          <li>Content Delivery</li>
-          <li>Heroku</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Project Management & Operations</h3>
-        <ul class="skill-list">
-          <li>Technical Project Management</li>
-          <li>Program Management</li>
-          <li>Project Governance</li>
-          <li>Strategic Planning</li>
-          <li>Process Optimization</li>
-          <li>Business Process Improvement</li>
-          <li>Operations Management</li>
-          <li>Vendor Management</li>
-          <li>Technical Documentation</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Leadership & Collaboration</h3>
-        <ul class="skill-list">
-          <li>Team Leadership</li>
-          <li>Stakeholder Management</li>
-          <li>Cross-functional Collaboration</li>
-          <li>Strategic Partnerships</li>
-          <li>Quality Assurance</li>
-          <li>Data Analysis</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="experience-highlight">
-      <h2>Professional Experience</h2>
-      <p class="experience-intro">
-        My career in technology has been hands-on and multifaceted. At the
-        League of Historic American Theatres, I managed all technical
-        operations—web redesign, email migrations, mobile app development, and
-        daily content management. It was a role that required resourcefulness
-        and the ability to deliver results across a broad technical landscape.
-      </p>
-      <p class="experience-intro">
-        As Director of Information Technology at Wallace MacDonald, my focus
-        expanded from building systems to securing them. I managed
-        infrastructure, implemented security protocols, and protected
-        proprietary technology for a green energy startup—work that deepened my
-        commitment to cybersecurity and revealed where I wanted to take my
-        career.
-      </p>
-
-      <div class="linkedin-cta">
-        <p>
-          For my complete professional history, recommendations, and detailed
-          accomplishments:
-        </p>
-        <a
-          href="https://www.linkedin.com/in/theresa-grier/"
-          target="_blank"
-          class="btn-linkedin"
-        >
-          View Full Profile on LinkedIn
-        </a>
-      </div>
-    </section>
-
-    <div class="cta-section">
-      <p>Want to see my work in action?</p>
-      <a href="/portfolio" class="btn-primary">View My Portfolio</a>
-    </div>
-  </article>
+    </article>
 </BaseLayout>
 
 <style>
-  .what-i-can-do-page {
-    /* Page-specific body class */
-  }
+    .what-i-can-do-page {
+        background-color: #fafafa;
+    }
 
-  .skills-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
+    /* Hero Section with Hexagon Headshot */
+    .hero-section {
+        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+        padding: 4rem 2rem;
+    }
 
-  h1 {
-    font-size: 2.5rem;
-    color: #1a1a1a;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
+    .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
 
-  .intro-section {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: #f0f7ff; /* Cool professional background */
-    border-radius: 12px;
-    border-left: 4px solid #0066cc; /* Professional blue accent */
-    text-align: center;
-  }
+    .hero-image {
+        flex-shrink: 0;
+    }
 
-  .lead {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: #555;
-    margin: 0;
-  }
+    /* HEXAGON TECH FRAME STYLING */
+    .hero-image img.hexagon-frame {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        transition: all 0.4s ease;
+    }
 
-  /* Certifications Section */
-  .certs-intro {
-    font-size: 1.05rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-  }
+    .hero-image img.hexagon-frame:hover {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+    }
 
-  .certifications {
-    margin-bottom: 4rem;
-  }
+    .hero-text {
+        flex: 1;
+        color: white;
+    }
 
-  .certifications h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #0066cc;
-  }
+    .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
 
-  .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+    .intro {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        opacity: 0.95;
+    }
 
-  .cert-card {
-    background: white;
-    border: 2px solid #e5e5e5;
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s;
-  }
+    /* Content Wrapper */
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
 
-  .cert-card:hover {
-    border-color: #0066cc;
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
-  }
+    /* Section Headers */
+    h2 {
+        font-size: 2rem;
+        color: #364a60;
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #00438f;
+    }
 
-  .cert-card.placeholder {
-    border-style: dashed;
-    opacity: 0.7;
-  }
+    /* Certifications Section */
+    .certifications {
+        margin-bottom: 5rem;
+    }
 
-  .cert-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
+    .certs-intro {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #545454;
+        margin-bottom: 2rem;
+        max-width: 800px;
+    }
 
-  .cert-card h3 {
-    font-size: 1.3rem;
-    color: #0066cc;
-    margin-bottom: 0.5rem;
-  }
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
 
-  .cert-card p {
-    color: #666;
-    margin-bottom: 0.5rem;
-  }
+    .cert-card {
+        background: white;
+        border: 2px solid #e5e5e5;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
 
-  .cert-details {
-    font-size: 0.9rem;
-    color: #999;
-  }
+    .cert-card:hover {
+        border-color: #00438f;
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 67, 143, 0.2);
+    }
 
-  /* Badge Image */
-  .cert-badge-image {
-    margin-bottom: 1rem;
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .cert-card.placeholder {
+        border-style: dashed;
+        opacity: 0.7;
+    }
 
-  .cert-badge-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+    .cert-card.in-progress {
+        border-color: #00438f;
+        background: linear-gradient(135deg, #e1c9c8 0%, #ffffff 100%);
+    }
 
-  /* Skills Section */
-  .skills {
-    margin-bottom: 4rem;
-  }
+    .cert-badge-image {
+        margin-bottom: 1rem;
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-  .skills h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #0066cc;
-  }
+    .cert-badge-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 
-  .skill-category {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-  }
+    .cert-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
 
-  .skill-category h3 {
-    font-size: 1.3rem;
-    color: #0066cc;
-    margin-bottom: 1rem;
-  }
+    .cert-card h3 {
+        font-size: 1.3rem;
+        color: #00438f;
+        margin-bottom: 0.5rem;
+    }
 
-  .skill-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem;
-    list-style: none;
-  }
+    .cert-card p {
+        color: #545454;
+        margin-bottom: 0.5rem;
+    }
 
-  .skill-list li {
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border-radius: 6px;
-    color: #555;
-    font-weight: 500;
-    border-left: 3px solid #0066cc;
-  }
+    .cert-details {
+        font-size: 0.9rem;
+        color: #808080;
+    }
 
-  /* Experience Section */
-  .experience-highlight {
-    margin-bottom: 3rem;
-  }
+    .verify-link {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #00438f;
+        font-weight: 600;
+    }
 
-  .experience-highlight h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #0066cc;
-  }
+    a.cert-card:hover .verify-link {
+        text-decoration: underline;
+    }
 
-  .experience-intro {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 2rem;
-  }
+    /* Skills Section */
+    .skills {
+        margin-bottom: 5rem;
+    }
 
-  .linkedin-cta {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f0f7ff;
-    border-radius: 12px;
-  }
+    .skill-category {
+        margin-bottom: 2.5rem;
+    }
 
-  .linkedin-cta p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 1rem;
-  }
+    .skill-category h3 {
+        font-size: 1.5rem;
+        color: #00438f;
+        margin-bottom: 1rem;
+    }
 
-  .btn-linkedin {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #0077b5; /* LinkedIn blue */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
 
-  .btn-linkedin:hover {
-    background-color: #006399;
-    transform: translateY(-2px);
-  }
+    .skill-tag {
+        background: white;
+        color: #00438f;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.95rem;
+        border: 2px solid #00438f;
+    }
 
-  /* CTA Section */
-  .cta-section {
-    text-align: center;
-    padding: 3rem 2rem;
-    background-color: #f8f9fa;
-    border-radius: 12px;
-  }
+    /* Professional Experience Section */
+    .experience {
+        margin-bottom: 3rem;
+    }
 
-  .cta-section p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-  }
+    .experience-intro {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #545454;
+        margin-bottom: 1.5rem;
+    }
 
-  .btn-primary {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #0066cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
+    .linkedin-cta {
+        margin-top: 3rem;
+        padding: 3rem 2rem;
+        background: linear-gradient(135deg, #e1c9c8 0%, #aeaeae 20%, #e1c9c8 100%);
+        border-radius: 12px;
+        text-align: center;
+    }
 
-  .btn-primary:hover {
-    background-color: #0052a3;
-    transform: translateY(-2px);
-  }
+    .linkedin-cta p {
+        font-size: 1.2rem;
+        color: #364a60;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+
+    .btn-linkedin {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background-color: #00438f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-linkedin:hover {
+        background-color: #003366;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
+    }
+
+    .experience-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #00438f;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-header {
+        margin-bottom: 1rem;
+    }
+
+    .experience-header h3 {
+        font-size: 1.5rem;
+        color: #364a60;
+        margin-bottom: 0.25rem;
+    }
+
+    .company {
+        font-size: 1.1rem;
+        color: #00438f;
+        font-weight: 500;
+        margin-right: 1rem;
+    }
+
+    .dates {
+        font-size: 1rem;
+        color: #808080;
+        font-style: italic;
+    }
+
+    .experience-description {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #545454;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 968px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-image img.hexagon-frame {
+            width: 300px;
+            height: 300px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .hero-section {
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-image img.hexagon-frame {
+            width: 250px;
+            height: 250px;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+        }
+
+        .cert-grid {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
 </style>

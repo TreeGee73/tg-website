@@ -1,25 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Portfolio projects data
 const projects = [
     {
-        title: "Personal Portfolio v1",
-        description: "Professional portfolio site built with React, showcasing projects and technical skills. Deployed and actively maintained from 2020-2025, demonstrating long-term project ownership and React component architecture.",
-        technologies: ["React", "Node.js", "Express", "SCSS", "Netlify"],
+        title: "Personal Portfolio (React)",
+        description: "Self-maintained React portfolio that's evolved over 4+ years. Features responsive design, project showcases, and clean UI. Demonstrates long-term ownership and continuous improvement of a production codebase.",
+        technologies: ["React", "JavaScript", "CSS", "Responsive Design"],
         github: "https://github.com/TreeGee73/my-react-portfolio",
         image: "/images/project-1.png"
     },
     {
         title: "COVID-19 Data Dashboard",
-        description: "Collaborative full-stack application providing real-time COVID-19 statistics and trends. Features interactive data visualization, location-based filtering, and responsive design. Built with a 4-person team using agile methodology.",
-        technologies: ["JavaScript", "Chart.js", "Foundation CSS", "APIs", "GitHub Pages"],
+        description: "Team-built data visualization dashboard tracking COVID-19 statistics. Features interactive charts, real-time data updates, and clean presentation of complex information. Collaborated with team members on design and implementation.",
+        technologies: ["JavaScript", "HTML/CSS", "APIs", "Data Visualization"],
         github: "https://github.com/TreeGee73/covid19-dashboard-project1",
         image: "/images/project-2.png"
     },
     {
-        title: "Burger Logger",
-        description: "Full-stack CRUD application following MVC design pattern. Features custom ORM, MySQL database integration, and dynamic templating with Handlebars. Demonstrates server-side routing and database management.",
+        title: "Burger Eater App",
+        description: "Full-stack MVC application demonstrating CRUD operations with custom ORM. Users can create, devour, and track burgers with persistent MySQL storage. Showcases understanding of MVC architecture and database design.",
         technologies: ["Node.js", "Express", "MySQL", "Handlebars", "Custom ORM"],
         github: "https://github.com/TreeGee73/Burger-Eater",
         image: "/images/project-3.png"
@@ -34,49 +33,52 @@ const projects = [
 ];
 ---
 
-<BaseLayout pageTitle="Portfolio" pageClass="portfolio-page">
-    <article class="portfolio-content">
-        <h1>My Work</h1>
-        
-        <div class="intro-section">
-            <p class="lead">
-                A collection of projects showcasing my technical skills and problem-solving abilities. 
-                All code is available on GitHub.
-            </p>
+<BaseLayout title="Portfolio | Theresa Grier">
+    <article class="portfolio-page">
+        <!-- Gradient Header -->
+        <div class="page-header">
+            <div class="header-content">
+                <h1>Portfolio</h1>
+                <p class="lead">A collection of projects showcasing my technical skills, problem-solving approach, and evolution as a developer.</p>
+            </div>
         </div>
 
-        <div class="projects-grid">
-            {projects.map(project => (
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src={project.image} alt={project.title} />
-                        <div class="project-overlay">
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                                View Code on GitHub
-                            </a>
+        <div class="portfolio-content">
+            <!-- Projects Grid -->
+            <section class="projects-section">
+                <div class="projects-grid">
+                    {projects.map(project => (
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src={project.image} alt={project.title} />
+                                <div class="project-overlay">
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" class="view-code-btn">
+                                        View Code →
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                                <div class="tech-stack">
+                                    {project.technologies.map(tech => (
+                                        <span class="tech-tag">{tech}</span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>{project.title}</h3>
-                        <p class="project-description">{project.description}</p>
-                        <div class="tech-tags">
-                            {project.technologies.map(tech => (
-                                <span class="tech-tag">{tech}</span>
-                            ))}
-                        </div>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" class="github-link">
-                            View on GitHub →
-                        </a>
-                    </div>
+                    ))}
                 </div>
-            ))}
-        </div>
+            </section>
 
-        <div class="github-cta">
-            <p>Want to see more? Check out my GitHub profile for all my projects and contributions.</p>
-            <a href="https://github.com/TreeGee73" target="_blank" rel="noopener noreferrer" class="btn-github">
-                Visit My GitHub
-            </a>
+            <!-- GitHub CTA -->
+            <section class="github-cta">
+                <h2>Want to See More?</h2>
+                <p>Check out my GitHub profile for all my projects and contributions.</p>
+                <a href="https://github.com/TreeGee73" target="_blank" rel="noopener noreferrer" class="btn-github">
+                    Visit My GitHub
+                </a>
+            </section>
         </div>
     </article>
 </BaseLayout>
@@ -86,32 +88,38 @@ const projects = [
         background-color: #fafafa;
     }
 
-    .portfolio-content {
+    /* Gradient Header */
+    .page-header {
+        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+        color: white;
+        padding: 4rem 2rem 3rem;
+    }
+
+    .header-content {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem 0;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        color: #1a1a1a;
-        margin-bottom: 2rem;
         text-align: center;
     }
 
-    .intro-section {
-        margin-bottom: 3rem;
-        padding: 2rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 12px;
-        text-align: center;
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
     }
 
     .lead {
-        font-size: 1.25rem;
-        line-height: 1.8;
-        color: white;
-        margin: 0;
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+
+    /* Portfolio Content */
+    .portfolio-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
     }
 
     /* Projects Grid */
@@ -120,12 +128,6 @@ const projects = [
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         margin-bottom: 4rem;
-    }
-
-    @media (max-width: 768px) {
-        .projects-grid {
-            grid-template-columns: 1fr;
-        }
     }
 
     .project-card {
@@ -145,8 +147,8 @@ const projects = [
     .project-image {
         position: relative;
         width: 100%;
-        height: 300px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        height: 250px;
+        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
         overflow: hidden;
     }
 
@@ -154,25 +156,21 @@ const projects = [
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .project-card:hover .project-image img {
-        transform: scale(1.05);
+        opacity: 1;
     }
 
     .project-overlay {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(102, 126, 234, 0.9);
+        right: 0;
+        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        background: rgba(0, 67, 143, 0.9);
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s;
     }
 
     .project-card:hover .project-overlay {
@@ -180,11 +178,11 @@ const projects = [
     }
 
     .view-code-btn {
-        padding: 1rem 2rem;
         background: white;
-        color: #667eea;
-        text-decoration: none;
+        color: #00438f;
+        padding: 0.75rem 1.5rem;
         border-radius: 8px;
+        text-decoration: none;
         font-weight: 600;
         transition: all 0.3s;
     }
@@ -194,45 +192,107 @@ const projects = [
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Project Details */
-    .project-details {
-        padding: 1.5rem;
+    /* Project Content */
+    .project-content {
+        padding: 2rem;
     }
 
-    .project-details h3 {
+    .project-content h3 {
         font-size: 1.5rem;
-        color: #667eea;
+        color: #364a60;
         margin-bottom: 1rem;
     }
 
-    .project-description {
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        min-height: 4.8rem;
+    .project-content p {
+        color: #545454;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
     }
 
-    /* Tech Tags */
-    .tech-tags {
+    /* Tech Stack */
+    .tech-stack {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin-bottom: 1rem;
-        min-height: 2.5rem;
     }
 
     .tech-tag {
+        background: #e1c9c8;
+        color: #364a60;
         padding: 0.4rem 0.8rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-radius: 20px;
+        border-radius: 16px;
         font-size: 0.85rem;
         font-weight: 500;
     }
 
-    /* GitHub Link */
-    .github-link {
+    /* GitHub CTA */
+    .github-cta {
+        text-align: center;
+        padding: 3rem 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .github-cta h2 {
+        font-size: 2rem;
+        color: #364a60;
+        margin-bottom: 1rem;
+    }
+
+    .github-cta p {
+        font-size: 1.2rem;
+        color: #545454;
+        margin-bottom: 2rem;
+    }
+
+    .btn-github {
         display: inline-block;
-        color: #667eea;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+        color: white;
         text-decoration: none;
-        font-weigh
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-github:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .page-header {
+            padding: 3rem 1.5rem 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .portfolio-content {
+            padding: 3rem 1.5rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.3rem;
+        }
+    }
+</style>

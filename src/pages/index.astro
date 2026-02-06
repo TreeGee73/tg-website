@@ -2,82 +2,179 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageTitle="Home">
-    <div class="hero">
-        <h1>Theresa Grier</h1>
-        <p class="tagline">IT Professional | Cybersecurity | Full-Stack Developer</p>
-        <p class="intro">
-            Welcome! I'm building solutions, solving problems, and strengthening security 
-            in the digital world.
-        </p>
-        <div class="cta-buttons">
-            <a href="/who-i-am" class="btn-primary">Learn About Me</a>
-            <a href="/what-i-can-do" class="btn-secondary">See What I Can Do</a>
-        </div>
-    </div>
+<BaseLayout title="Theresa Grier | IT Professional & Cybersecurity Specialist">
+    <article class="home-page">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="/images/headshot.png" alt="Theresa Grier - IT Professional" />
+                </div>
+                <div class="hero-text">
+                    <h1>Theresa Grier</h1>
+                    <p class="tagline">IT Professional | Cybersecurity Specialist | Problem Solver</p>
+                    <p class="intro">
+                        Bridging technology and security with a passion for protecting digital infrastructure. 
+                        Currently pursuing a B.S. in Cybersecurity while bringing years of IT leadership experience 
+                        to every challenge.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="/who-i-am" class="btn">My Story</a>
+                        <a href="/what-i-can-do" class="btn">My Skills</a>
+                        <a href="/contact" class="btn">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
 </BaseLayout>
 
 <style>
+    .home-page {
+        background: linear-gradient(135deg, #e1c9c8 0%, #aeaeae 100%);
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .hero {
-        text-align: center;
-        padding: 4rem 2rem;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    /* ELEVATED PROFESSIONAL HEADSHOT STYLING - SQUARE FORMAT */
+    .hero-image {
+        flex-shrink: 0;
+    }
+
+    .hero-image img {
+        width: 350px;
+        height: 350px;
+        border-radius: 12px; /* Subtle rounded corners for polish */
+        object-fit: cover;
+        
+        /* Layered shadow for depth - makes it "lift" off the page */
+        box-shadow: 
+            0 10px 30px rgba(0, 67, 143, 0.3),
+            0 0 40px rgba(0, 67, 143, 0.2);
+        
+        /* Subtle white border to define edges */
+        border: 4px solid rgba(255, 255, 255, 0.9);
+        
+        /* Smooth transitions for hover effect */
+        transition: all 0.4s ease;
+    }
+
+    .hero-image img:hover {
+        /* Lift on hover */
+        transform: translateY(-8px) scale(1.02);
+        
+        /* Enhanced glow on hover */
+        box-shadow: 
+            0 15px 40px rgba(0, 67, 143, 0.4),
+            0 0 60px rgba(0, 67, 143, 0.3);
+    }
+
+    .hero-text {
+        flex: 1;
     }
 
     h1 {
         font-size: 3rem;
-        margin-bottom: 1rem;
-        color: #1a1a1a;
+        color: #364a60;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
     }
 
     .tagline {
-        font-size: 1.3rem;
-        color: #666;
-        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        color: #00438f;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
     }
 
     .intro {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.8;
-        color: #555;
-        margin-bottom: 3rem;
+        color: #545454;
+        margin-bottom: 2.5rem;
     }
 
+    /* CTA Buttons */
     .cta-buttons {
         display: flex;
         gap: 1rem;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .btn-primary, .btn-secondary {
+    .btn {
+        display: inline-block;
         padding: 1rem 2rem;
-        border-radius: 8px;
         text-decoration: none;
+        border-radius: 8px;
         font-weight: 600;
-        transition: all 0.3s;
-    }
-
-    .btn-primary {
-        background-color: #0066cc;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        background-color: #00438f;
         color: white;
     }
 
-    .btn-primary:hover {
-        background-color: #0052a3;
+    .btn:hover {
+        background-color: #003366;
         transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
     }
 
-    .btn-secondary {
-        background-color: transparent;
-        color: #0066cc;
-        border: 2px solid #0066cc;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+        }
     }
 
-    .btn-secondary:hover {
-        background-color: #0066cc;
-        color: white;
-        transform: translateY(-2px);
+    @media (max-width: 480px) {
+        .hero-image img {
+            width: 250px;
+            height: 250px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .btn {
+            width: 100%;
+        }
     }
 </style>
