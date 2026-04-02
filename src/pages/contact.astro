@@ -1,338 +1,362 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Contact | Theresa Grier">
-    <article class="contact-page">
-        <!-- Gradient Header -->
-        <div class="page-header">
-            <div class="header-content">
-                <h1>Let's Connect</h1>
-                <p class="lead">Ready to discuss a project, opportunity, or just talk tech? I'd love to hear from you.</p>
+  <article class="contact-page">
+    <!-- Gradient Header -->
+    <div class="page-header">
+      <div class="header-content">
+        <h1>Let's Connect</h1>
+        <p class="lead">
+          Ready to discuss a project, opportunity, or just talk tech? I'd love
+          to hear from you.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-grid">
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+          <h2>Get in Touch</h2>
+
+          <div class="contact-method">
+            <div class="method-icon">📧</div>
+            <h3>Email</h3>
+            <a href="mailto:theresa.grier@proton.me">theresa.grier@proton.me</a>
+          </div>
+
+          <div class="contact-method">
+            <div class="method-icon">💼</div>
+            <h3>LinkedIn</h3>
+            <a
+              href="https://www.linkedin.com/in/theresa-grier/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/theresa-grier
+            </a>
+          </div>
+
+          <div class="contact-method">
+            <div class="method-icon">💻</div>
+            <h3>GitHub</h3>
+            <a
+              href="https://github.com/TreeGee73"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/TreeGee73
+            </a>
+          </div>
+
+          <div class="availability">
+            <h3>Availability</h3>
+            <p>Currently open to:</p>
+            <ul>
+              <li>Full-time opportunities in cybersecurity</li>
+              <li>IT infrastructure & systems roles</li>
+              <li>Contract/consulting projects (through GeeCubed, LLC)</li>
+              <li>Freelance web & technical work</li>
+              <li>Networking and informational interviews</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+          <h2>Send a Message</h2>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <!-- Hidden fields for Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display: none;">
+              <label
+                >Don't fill this out if you're human: <input
+                  name="bot-field"
+                /></label
+              >
+            </p>
+
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required />
             </div>
-        </div>
 
-        <div class="contact-content">
-            <div class="contact-grid">
-                <!-- Contact Methods -->
-                <section class="contact-methods">
-                    <h2>Get in Touch</h2>
-                    
-                    <div class="contact-method">
-                        <div class="method-icon">📧</div>
-                        <h3>Email</h3>
-                        <a href="mailto:theresa.grier@proton.me">theresa.grier@proton.me</a>
-                    </div>
-
-                    <div class="contact-method">
-                        <div class="method-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/theresa-grier/" target="_blank" rel="noopener noreferrer">
-                            linkedin.com/in/theresa-grier
-                        </a>
-                    </div>
-
-                    <div class="contact-method">
-                        <div class="method-icon">💻</div>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/TreeGee73" target="_blank" rel="noopener noreferrer">
-                            github.com/TreeGee73
-                        </a>
-                    </div>
-
-                    <div class="availability">
-                        <h3>Availability</h3>
-                        <p>Currently open to:</p>
-                        <ul>
-                            <li>Full-time opportunities in cybersecurity</li>
-                            <li>IT infrastructure & systems roles</li>
-                            <li>Contract/consulting projects (through GeeCubed, LLC)</li>
-                            <li>Freelance web & technical work</li>
-                            <li>Networking and informational interviews</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Contact Form -->
-                <section class="contact-form-section">
-                    <h2>Send a Message</h2>
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <!-- Hidden fields for Netlify -->
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                        </p>
-
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </section>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
             </div>
 
-            <!-- Response Time Note -->
-            <section class="response-note">
-                <p>📬 I typically respond within 24-48 hours. Looking forward to connecting with you!</p>
-            </section>
-        </div>
-    </article>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </section>
+      </div>
+
+      <!-- Response Time Note -->
+      <section class="response-note">
+        <p>
+          📬 I typically respond within 24-48 hours. Looking forward to
+          connecting with you!
+        </p>
+      </section>
+    </div>
+  </article>
 </BaseLayout>
 
 <style>
-    .contact-page {
-        background-color: #fafafa;
-    }
+  .contact-page {
+    background-color: #fafafa;
+  }
 
-    /* Gradient Header */
+  /* Gradient Header */
+  .page-header {
+    background: linear-gradient(135deg, #364a60 0%, #e1c9c8 100%);
+    color: white;
+    padding: 4rem 2rem 3rem;
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  /* Contact Content */
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Contact Methods */
+  .contact-methods h2,
+  .contact-form-section h2 {
+    font-size: 1.8rem;
+    color: #364a60;
+    margin-bottom: 2rem;
+  }
+
+  .contact-method {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+
+  .contact-method:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .method-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-method h3 {
+    font-size: 1.2rem;
+    color: #00438f;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-method a {
+    color: #545454;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .contact-method a:hover {
+    color: #00438f;
+  }
+
+  /* Availability Section */
+  .availability {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .availability h3 {
+    font-size: 1.2rem;
+    color: #00438f;
+    margin-bottom: 1rem;
+  }
+
+  .availability p {
+    color: #545454;
+    margin-bottom: 0.5rem;
+  }
+
+  .availability ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .availability li {
+    color: #545454;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .availability li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00438f;
+    font-weight: bold;
+  }
+
+  /* Contact Form */
+  .contact-form-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #364a60;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #aeaeae;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #00438f;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
+  }
+
+  /* Response Note */
+  .response-note {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .response-note p {
+    font-size: 1.1rem;
+    color: #545454;
+    margin: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 968px) {
     .page-header {
-        background: linear-gradient(135deg, #364a60 0%, #e1c9c8 100%);
-        color: white;
-        padding: 4rem 2rem 3rem;
-    }
-
-    .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
+      padding: 3rem 1.5rem 2rem;
     }
 
     .page-header h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
+      font-size: 2.5rem;
     }
 
     .lead {
-        font-size: 1.3rem;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.6;
-        opacity: 0.95;
-    }
-
-    /* Contact Content */
-    .contact-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
+      font-size: 1.1rem;
     }
 
     .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        gap: 3rem;
-        margin-bottom: 3rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    /* Contact Methods */
+    .contact-content {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
     .contact-methods h2,
     .contact-form-section h2 {
-        font-size: 1.8rem;
-        color: #364a60;
-        margin-bottom: 2rem;
+      font-size: 1.5rem;
     }
 
-    .contact-method {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
-    }
-
-    .contact-method:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .method-icon {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-method h3 {
-        font-size: 1.2rem;
-        color: #00438f;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-method a {
-        color: #545454;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    .contact-method a:hover {
-        color: #00438f;
-    }
-
-    /* Availability Section */
-    .availability {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .availability h3 {
-        font-size: 1.2rem;
-        color: #00438f;
-        margin-bottom: 1rem;
-    }
-
-    .availability p {
-        color: #545454;
-        margin-bottom: 0.5rem;
-    }
-
-    .availability ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    .availability li {
-        color: #545454;
-        padding: 0.5rem 0;
-        padding-left: 1.5rem;
-        position: relative;
-    }
-
-    .availability li:before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #00438f;
-        font-weight: bold;
-    }
-
-    /* Contact Form */
     .contact-form-section {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
     }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: #364a60;
-        font-weight: 500;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 2px solid #aeaeae;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: border-color 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: #00438f;
-    }
-
-    .form-group textarea {
-        resize: vertical;
-    }
-
-    .submit-btn {
-        width: 100%;
-        padding: 1rem 2rem;
-        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
-    }
-
-    /* Response Note */
-    .response-note {
-        text-align: center;
-        padding: 2rem;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .response-note p {
-        font-size: 1.1rem;
-        color: #545454;
-        margin: 0;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 968px) {
-        .page-header {
-            padding: 3rem 1.5rem 2rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-        }
-
-        .lead {
-            font-size: 1.1rem;
-        }
-
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .contact-content {
-            padding: 3rem 1.5rem;
-        }
-    }
-
-    @media (max-width: 640px) {
-        .page-header h1 {
-            font-size: 2rem;
-        }
-
-        .contact-methods h2,
-        .contact-form-section h2 {
-            font-size: 1.5rem;
-        }
-
-        .contact-form-section {
-            padding: 1.5rem;
-        }
-    }
+  }
 </style>
