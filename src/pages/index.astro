@@ -1,180 +1,186 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Theresa Grier | IT Professional & Cybersecurity Specialist">
-    <article class="home-page">
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="/images/headshot.png" alt="Theresa Grier - IT Professional" />
-                </div>
-                <div class="hero-text">
-                    <h1>Theresa Grier</h1>
-                    <p class="tagline">IT Professional | Cybersecurity Specialist | Problem Solver</p>
-                    <p class="intro">
-                        Bridging technology and security with a passion for protecting digital infrastructure. 
-                        Currently pursuing a B.S. in Cybersecurity while bringing years of IT leadership experience 
-                        to every challenge.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="/who-i-am" class="btn">My Story</a>
-                        <a href="/what-i-can-do" class="btn">My Skills</a>
-                        <a href="/contact" class="btn">Get in Touch</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </article>
+<BaseLayout title="Theresa Grier | IT & Project Management Leader">
+  <article class="home-page">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img
+            src="/images/headshot.png"
+            alt="Theresa Grier - IT Professional"
+          />
+        </div>
+        <div class="hero-text">
+          <h1>Theresa Grier</h1>
+          <p class="tagline">
+            IT & Project Management Leader | Cybersecurity & Infrastructure |
+            Problem Solver
+          </p>
+          <p class="intro">
+            20+ years leading IT operations, project management, and
+            cybersecurity across multi-site organizations. Currently pursuing a
+            B.S. in Cybersecurity and Information Assurance at WGU.
+          </p>
+          <div class="cta-buttons">
+            <a href="/who-i-am" class="btn">My Story</a>
+            <a href="/what-i-can-do" class="btn">My Skills</a>
+            <a href="/contact" class="btn">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
 </BaseLayout>
 
 <style>
-    .home-page {
-        background: linear-gradient(135deg, #e1c9c8 0%, #aeaeae 100%);
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .home-page {
+    background: linear-gradient(135deg, #e1c9c8 0%, #aeaeae 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .hero {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 3rem 2rem;
-    }
+  .hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
 
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  /* ELEVATED PROFESSIONAL HEADSHOT STYLING - SQUARE FORMAT */
+  .hero-image {
+    flex-shrink: 0;
+  }
+
+  .hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 12px; /* Subtle rounded corners for polish */
+    object-fit: cover;
+
+    /* Layered shadow for depth - makes it "lift" off the page */
+    box-shadow:
+      0 10px 30px rgba(0, 67, 143, 0.3),
+      0 0 40px rgba(0, 67, 143, 0.2);
+
+    /* Subtle white border to define edges */
+    border: 4px solid rgba(255, 255, 255, 0.9);
+
+    /* Smooth transitions for hover effect */
+    transition: all 0.4s ease;
+  }
+
+  .hero-image img:hover {
+    /* Lift on hover */
+    transform: translateY(-8px) scale(1.02);
+
+    /* Enhanced glow on hover */
+    box-shadow:
+      0 15px 40px rgba(0, 67, 143, 0.4),
+      0 0 60px rgba(0, 67, 143, 0.3);
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #364a60;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    color: #00438f;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #545454;
+    margin-bottom: 2.5rem;
+  }
+
+  /* CTA Buttons */
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background-color: #00438f;
+    color: white;
+  }
+
+  .btn:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .hero-content {
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-        text-align: left;
-    }
-
-    /* ELEVATED PROFESSIONAL HEADSHOT STYLING - SQUARE FORMAT */
-    .hero-image {
-        flex-shrink: 0;
-    }
-
-    .hero-image img {
-        width: 350px;
-        height: 350px;
-        border-radius: 12px; /* Subtle rounded corners for polish */
-        object-fit: cover;
-        
-        /* Layered shadow for depth - makes it "lift" off the page */
-        box-shadow: 
-            0 10px 30px rgba(0, 67, 143, 0.3),
-            0 0 40px rgba(0, 67, 143, 0.2);
-        
-        /* Subtle white border to define edges */
-        border: 4px solid rgba(255, 255, 255, 0.9);
-        
-        /* Smooth transitions for hover effect */
-        transition: all 0.4s ease;
-    }
-
-    .hero-image img:hover {
-        /* Lift on hover */
-        transform: translateY(-8px) scale(1.02);
-        
-        /* Enhanced glow on hover */
-        box-shadow: 
-            0 15px 40px rgba(0, 67, 143, 0.4),
-            0 0 60px rgba(0, 67, 143, 0.3);
+      flex-direction: column;
+      text-align: center;
     }
 
     .hero-text {
-        flex: 1;
+      width: 100%;
     }
 
     h1 {
-        font-size: 3rem;
-        color: #364a60;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
+      font-size: 2.5rem;
     }
 
     .tagline {
-        font-size: 1.5rem;
-        color: #00438f;
-        margin-bottom: 1.5rem;
-        font-weight: 500;
+      font-size: 1.2rem;
     }
 
     .intro {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #545454;
-        margin-bottom: 2.5rem;
+      font-size: 1.1rem;
     }
 
-    /* CTA Buttons */
-    .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+    .hero-image img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-image img {
+      width: 250px;
+      height: 250px;
+    }
+
+    h1 {
+      font-size: 2rem;
     }
 
     .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        background-color: #00438f;
-        color: white;
+      width: 100%;
     }
-
-    .btn:hover {
-        background-color: #003366;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .hero-content {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .hero-text {
-            width: 100%;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-        }
-
-        .intro {
-            font-size: 1.1rem;
-        }
-
-        .hero-image img {
-            width: 300px;
-            height: 300px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .hero-image img {
-            width: 250px;
-            height: 250px;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        .btn {
-            width: 100%;
-        }
-    }
+  }
 </style>
