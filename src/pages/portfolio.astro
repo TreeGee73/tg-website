@@ -1,298 +1,428 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const projects = [
-    {
-        title: "Personal Portfolio (React)",
-        description: "Self-maintained React portfolio that's evolved over 4+ years. Features responsive design, project showcases, and clean UI. Demonstrates long-term ownership and continuous improvement of a production codebase.",
-        technologies: ["React", "JavaScript", "CSS", "Responsive Design"],
-        github: "https://github.com/TreeGee73/my-react-portfolio",
-        image: "/images/project-1.png"
-    },
-    {
-        title: "COVID-19 Data Dashboard",
-        description: "Team-built data visualization dashboard tracking COVID-19 statistics. Features interactive charts, real-time data updates, and clean presentation of complex information. Collaborated with team members on design and implementation.",
-        technologies: ["JavaScript", "HTML/CSS", "APIs", "Data Visualization"],
-        github: "https://github.com/TreeGee73/covid19-dashboard-project1",
-        image: "/images/project-2.png"
-    },
-    {
-        title: "Burger Eater App",
-        description: "Full-stack MVC application demonstrating CRUD operations with custom ORM. Users can create, devour, and track burgers with persistent MySQL storage. Showcases understanding of MVC architecture and database design.",
-        technologies: ["Node.js", "Express", "MySQL", "Handlebars", "Custom ORM"],
-        github: "https://github.com/TreeGee73/Burger-Eater",
-        image: "/images/project-3.png"
-    },
-    {
-        title: "Ascend - Tower Battle Game",
-        description: "Browser-based RPG game where players battle through creatures to reach the tower's top. Features character selection, turn-based combat system, and persistent player data. Final bootcamp project showcasing team collaboration and complex game logic.",
-        technologies: ["Node.js", "Express", "MySQL", "Sequelize", "Handlebars"],
-        github: "https://github.com/TreeGee73/Ascend",
-        image: "/images/project-4.png"
-    }
+const productionProjects = [
+  {
+    title: "theresagrier.com",
+    description:
+      "You're looking at it. This site is designed, built, and maintained by me — an Astro-based portfolio built from scratch, deployed on Netlify, and actively updated. It reflects my full approach to web development: thoughtful structure, cohesive design, and content that does real work.",
+    technologies: ["Astro", "HTML/CSS", "JavaScript", "Netlify"],
+    link: "/",
+    linkLabel: "Return to Home",
+    image: "/images/screenshot.png",
+  },
+  {
+    title: "League of Historic American Theatres",
+    description:
+      "A national nonprofit serving 300+ member organizations across the US and Canada. I directed two complete website redesigns over an 11-year engagement, managing front-end development, CMS architecture, vendor relationships, and all ongoing technical operations. Much of the site content is member-only, but the public face reflects the organization's scope.",
+    technologies: ["CMS", "HTML/CSS", "Mobile App", "Database Management"],
+    link: "https://www.lhat.org",
+    linkLabel: "Visit Site",
+    image: "/images/lhat.png",
+    external: true,
+  },
+];
+
+const devProjects = [
+  {
+    title: "Personal Portfolio (React)",
+    description:
+      "An earlier iteration of my portfolio built in React — a different stack from my current Astro site and worth keeping as a reference point. Self-maintained over several years, with responsive design and project showcases.",
+    technologies: ["React", "JavaScript", "CSS", "Responsive Design"],
+    github: "https://github.com/TreeGee73/my-react-portfolio",
+    image: "/images/project-1.png",
+  },
+  {
+    title: "Ascend — Tower Battle Game",
+    description:
+      "A browser-based RPG built as the final bootcamp project — team-built, with character selection, turn-based combat, and persistent player data backed by MySQL. The most architecturally complex of my bootcamp work, and the one I'm most proud of.",
+    technologies: ["Node.js", "Express", "MySQL", "Sequelize", "Handlebars"],
+    github: "https://github.com/TreeGee73/Ascend",
+    image: "/images/project-4.png",
+  },
 ];
 ---
 
 <BaseLayout title="Portfolio | Theresa Grier">
-    <article class="portfolio-page">
-        <!-- Gradient Header -->
-        <div class="page-header">
-            <div class="header-content">
-                <h1>Portfolio</h1>
-                <p class="lead">A collection of projects showcasing my technical skills, problem-solving approach, and evolution as a developer.</p>
-            </div>
-        </div>
+  <article class="portfolio-page">
+    <!-- Gradient Header -->
+    <div class="page-header">
+      <div class="header-content">
+        <h1>Portfolio</h1>
+        <p class="lead">
+          A curated look at what I build — from production sites built and
+          maintained for real organizations to full-stack applications across a
+          range of stacks.
+        </p>
+      </div>
+    </div>
 
-        <div class="portfolio-content">
-            <!-- Projects Grid -->
-            <section class="projects-section">
-                <div class="projects-grid">
-                    {projects.map(project => (
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src={project.image} alt={project.title} />
-                                <div class="project-overlay">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" class="view-code-btn">
-                                        View Code →
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
-                                <div class="tech-stack">
-                                    {project.technologies.map(tech => (
-                                        <span class="tech-tag">{tech}</span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+    <div class="portfolio-content">
+      <!-- Production Work -->
+      <section class="projects-section">
+        <div class="projects-grid">
+          {
+            productionProjects.map((project) => (
+              <div class="project-card production-card">
+                <div class="project-image">
+                  <img src={project.image} alt={project.title} />
                 </div>
-            </section>
-
-            <!-- GitHub CTA -->
-            <section class="github-cta">
-                <h2>Want to See More?</h2>
-                <p>Check out my GitHub profile for all my projects and contributions.</p>
-                <a href="https://github.com/TreeGee73" target="_blank" rel="noopener noreferrer" class="btn-github">
-                    Visit My GitHub
-                </a>
-            </section>
+                <div class="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div class="tech-stack">
+                    {project.technologies.map((tech) => (
+                      <span class="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.link}
+                    class="view-site-btn"
+                    {...(project.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                  >
+                    {project.linkLabel} →
+                  </a>
+                </div>
+              </div>
+            ))
+          }
         </div>
-    </article>
+      </section>
+
+      <!-- Subtle Divider -->
+      <div class="section-divider">
+        <span>Earlier Projects</span>
+      </div>
+
+      <!-- Development Projects -->
+      <section class="projects-section dev-section">
+        <div class="projects-grid">
+          {
+            devProjects.map((project) => (
+              <div class="project-card">
+                <div class="project-image">
+                  <img src={project.image} alt={project.title} />
+                  <div class="project-overlay">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="view-code-btn"
+                    >
+                      View Code →
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div class="tech-stack">
+                    {project.technologies.map((tech) => (
+                      <span class="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- GitHub CTA -->
+      <section class="github-cta">
+        <h2>Just the Highlights</h2>
+        <p>
+          This page reflects current and recent work. For the full picture —
+          including experiments, contributions, and work in progress — visit my
+          GitHub.
+        </p>
+        <a
+          href="https://github.com/TreeGee73"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-github"
+        >
+          Visit My GitHub
+        </a>
+      </section>
+    </div>
+  </article>
 </BaseLayout>
 
 <style>
-    .portfolio-page {
-        background-color: #fafafa;
-    }
+  .portfolio-page {
+    background-color: #fafafa;
+  }
 
-    /* Gradient Header */
+  /* Gradient Header */
+  .page-header {
+    background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+    color: white;
+    padding: 4rem 2rem 3rem;
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  /* Portfolio Content */
+  .portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Production cards get a subtle top accent */
+  .production-card {
+    border-top: 3px solid #00438f;
+  }
+
+  /* Project Image */
+  .project-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+    overflow: hidden;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+  }
+
+  /* Overlay — dev projects only */
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 67, 143, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .view-code-btn {
+    background: white;
+    color: #00438f;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .view-code-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Project Content */
+  .project-content {
+    padding: 2rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.5rem;
+    color: #364a60;
+    margin-bottom: 1rem;
+  }
+
+  .project-content p {
+    color: #545454;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Tech Stack */
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tag {
+    background: #e1c9c8;
+    color: #364a60;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  /* Visible button for production cards */
+  .view-site-btn {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    background: white;
+    color: #00438f;
+    border: 2px solid #00438f;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+
+  .view-site-btn:hover {
+    background: #00438f;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 67, 143, 0.2);
+  }
+
+  /* Subtle Section Divider */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 2.5rem;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #aeaeae;
+    opacity: 0.5;
+  }
+
+  .section-divider span {
+    font-size: 0.8rem;
+    color: #aeaeae;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  /* Dev section sits closer to the divider */
+  .dev-section {
+    margin-top: 0;
+  }
+
+  /* GitHub CTA */
+  .github-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+
+  .github-cta h2 {
+    font-size: 2rem;
+    color: #364a60;
+    margin-bottom: 1rem;
+  }
+
+  .github-cta p {
+    font-size: 1.2rem;
+    color: #545454;
+    margin-bottom: 2rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-github {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .page-header {
-        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
-        color: white;
-        padding: 4rem 2rem 3rem;
-    }
-
-    .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
+      padding: 3rem 1.5rem 2rem;
     }
 
     .page-header h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
+      font-size: 2.5rem;
     }
 
     .lead {
-        font-size: 1.3rem;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.6;
-        opacity: 0.95;
+      font-size: 1.1rem;
     }
 
-    /* Portfolio Content */
-    .portfolio-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
-    }
-
-    /* Projects Grid */
     .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-bottom: 4rem;
+      grid-template-columns: 1fr;
     }
 
-    .project-card {
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+    .portfolio-content {
+      padding: 3rem 1.5rem;
     }
+  }
 
-    .project-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Project Image with Overlay */
-    .project-image {
-        position: relative;
-        width: 100%;
-        height: 250px;
-        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
-        overflow: hidden;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 1;
-    }
-
-    .project-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 67, 143, 0.9);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .project-card:hover .project-overlay {
-        opacity: 1;
-    }
-
-    .view-code-btn {
-        background: white;
-        color: #00438f;
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s;
-    }
-
-    .view-code-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Project Content */
-    .project-content {
-        padding: 2rem;
+  @media (max-width: 640px) {
+    .page-header h1 {
+      font-size: 2rem;
     }
 
     .project-content h3 {
-        font-size: 1.5rem;
-        color: #364a60;
-        margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
-
-    .project-content p {
-        color: #545454;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Tech Stack */
-    .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .tech-tag {
-        background: #e1c9c8;
-        color: #364a60;
-        padding: 0.4rem 0.8rem;
-        border-radius: 16px;
-        font-size: 0.85rem;
-        font-weight: 500;
-    }
-
-    /* GitHub CTA */
-    .github-cta {
-        text-align: center;
-        padding: 3rem 2rem;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .github-cta h2 {
-        font-size: 2rem;
-        color: #364a60;
-        margin-bottom: 1rem;
-    }
-
-    .github-cta p {
-        font-size: 1.2rem;
-        color: #545454;
-        margin-bottom: 2rem;
-    }
-
-    .btn-github {
-        display: inline-block;
-        padding: 1rem 2rem;
-        background: linear-gradient(135deg, #364a60 0%, #00438f 100%);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-    }
-
-    .btn-github:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 67, 143, 0.3);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .page-header {
-            padding: 3rem 1.5rem 2rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-        }
-
-        .lead {
-            font-size: 1.1rem;
-        }
-
-        .projects-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .portfolio-content {
-            padding: 3rem 1.5rem;
-        }
-    }
-
-    @media (max-width: 640px) {
-        .page-header h1 {
-            font-size: 2rem;
-        }
-
-        .project-content h3 {
-            font-size: 1.3rem;
-        }
-    }
+  }
 </style>
