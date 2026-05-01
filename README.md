@@ -1,7 +1,7 @@
 # Theresa Grier - Professional Portfolio
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2df8fb52-bb81-43a7-9646-f834d386de13/deploy-status)](https://app.netlify.com/projects/tgrier-website/deploys)
+![Netlify Status](https://api.netlify.com/api/v1/badges/2df8fb52-bb81-43a7-9646-f834d386de13/deploy-status)](https://app.netlify.com/projects/tgrier-website/deploys)
 
 > Personal portfolio website showcasing IT security expertise, cybersecurity credentials, and professional experience
 
