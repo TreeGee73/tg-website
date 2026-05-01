@@ -3,6 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const productionProjects = [
   {
+    title: "roderickgrier.com",
+    description:
+      "A professional portfolio site for a licensed structural engineer with 25+ years of experience and 15 professional licenses across multiple states. Designed to support both freelance consulting and engineering leadership opportunities — clean, authoritative, and built to make a strong first impression with clients and employers alike.",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Netlify"],
+    link: "https://www.roderickgrier.com",
+    linkLabel: "Visit Site",
+    image: "/images/rg-website.png",
+    external: true,
+  },
+  {
     title: "theresagrier.com",
     description:
       "You're looking at it. This site is designed, built, and maintained by me — an Astro-based portfolio built from scratch, deployed on Netlify, and actively updated. It reflects my full approach to web development: thoughtful structure, cohesive design, and content that does real work.",
@@ -11,6 +21,9 @@ const productionProjects = [
     linkLabel: "Return to Home",
     image: "/images/screenshot.png",
   },
+];
+
+const lhatProject = [
   {
     title: "League of Historic American Theatres",
     description:
@@ -58,7 +71,7 @@ const devProjects = [
     </div>
 
     <div class="portfolio-content">
-      <!-- Production Work -->
+      <!-- Production Work — Row 1: roderickgrier.com + theresagrier.com -->
       <section class="projects-section">
         <div class="projects-grid">
           {
@@ -81,6 +94,38 @@ const devProjects = [
                     {...(project.external
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
+                  >
+                    {project.linkLabel} →
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Production Work — Row 2: LHAT -->
+      <section class="projects-section lhat-section">
+        <div class="projects-grid projects-grid--single">
+          {
+            lhatProject.map((project) => (
+              <div class="project-card production-card">
+                <div class="project-image">
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div class="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div class="tech-stack">
+                    {project.technologies.map((tech) => (
+                      <span class="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.link}
+                    class="view-site-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {project.linkLabel} →
                   </a>
@@ -196,6 +241,16 @@ const devProjects = [
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
+  }
+
+  /* Single-card row — LHAT sits left, right stays open */
+  .projects-grid--single {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lhat-section {
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .project-card {
@@ -407,7 +462,8 @@ const devProjects = [
       font-size: 1.1rem;
     }
 
-    .projects-grid {
+    .projects-grid,
+    .projects-grid--single {
       grid-template-columns: 1fr;
     }
 
