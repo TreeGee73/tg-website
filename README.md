@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Netlify Status](https://api.netlify.com/api/v1/badges/2df8fb52-bb81-43a7-9646-f834d386de13/deploy-status)](https://app.netlify.com/projects/tgrier-website/deploys)
 
-> Personal portfolio website showcasing IT security expertise, cybersecurity credentials, and professional experience
+> Personal portfolio website showcasing IT program and project leadership, hands-on web development, and 20+ years of technology experience
 
 ![Portfolio Screenshot](public/images/screenshot.png)
 
@@ -11,7 +11,7 @@
 
 ## 📋 Overview
 
-This is my professional portfolio website, designed to showcase my journey as an IT Professional and Cybersecurity Specialist. The site features a "progressive revelation" design philosophy - visitors can explore different facets of my professional identity through dedicated pages, each revealing a different aspect of who I am while maintaining cohesive professional positioning.
+This is my professional portfolio website, designed to showcase my experience as an IT Program & Project Manager | Web Developer. The site features a "progressive revelation" design philosophy - visitors can explore different facets of my professional identity through dedicated pages, each revealing a different aspect of who I am while maintaining cohesive professional positioning.
 
 Built with modern web technologies and deployed on Netlify, this portfolio serves as a central hub for potential employers, clients, and professional connections to learn about my technical skills, certifications, and career experience.
 
@@ -23,7 +23,7 @@ Built with modern web technologies and deployed on Netlify, this portfolio serve
 ## ✨ Key Features
 
 - **Progressive Revelation Design** - Five distinct pages showcasing different personality aspects while maintaining professional cohesion
-- **Dynamic Certification Display** - Real-time Credly badge integration for current certifications
+- **Verified Certifications** - Certification badges linked to public Credly credentials for third-party verification
 - **Responsive Design** - Optimized experience across desktop, tablet, and mobile devices
 - **Professional Branding** - Custom color palette and cohesive visual identity
 - **Contact Form Integration** - Netlify Forms with email notifications for direct communication
@@ -78,7 +78,7 @@ npm run preview
 
 ### Design & Assets
 - **Custom Brand Colors** - Professional color palette aligned with personal branding
-- **Credly API** - Dynamic certification badge display
+- **Credly** - Public credential verification links for certification badges
 - **Responsive Images** - Optimized assets for web performance
 
 ---
@@ -105,7 +105,7 @@ tg-website/
 The website employs a "progressive revelation" approach where each page unveils a different facet of my professional identity:
 
 - **Home** - First impression and core value proposition
-- **Who I Am** - Personal story, resilience, and career journey
+- **Who I Am** - Leadership philosophy, hands-on approach, and problem-solving mindset
 - **What I Can Do** - Technical skills and certifications
 - **Portfolio** - Project showcases and work examples
 - **Contact** - Professional connections and communication
@@ -123,10 +123,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Theresa Grier**  
-*IT Professional | Cybersecurity Specialist*
+*IT Program & Project Manager | Web Developer*
 
 - 🌐 Website: [theresagrier.com](https://theresagrier.com)
-- 💼 LinkedIn: [linkedin.com/in/theresa-grier](https://linkedin.com/in/theresa-grier)
+<!-- - 💼 LinkedIn: [linkedin.com/in/theresa-grier](https://linkedin.com/in/theresa-grier) -->
 - 🐙 GitHub: [@TreeGee73](https://github.com/TreeGee73)
 - 📧 Email: theresa.grier@proton.me
 
